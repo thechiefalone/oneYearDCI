@@ -1,0 +1,15 @@
+.foo {
+    color: green;
+}
+
+#foo {
+    color: blue;
+}
+
+/* if i use 
+    * {
+
+    }
+
+    everything will be styled. */
+
