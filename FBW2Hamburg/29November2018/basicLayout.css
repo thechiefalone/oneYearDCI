@@ -12,9 +12,10 @@ body {
     background-color: royalblue;
     text-align: center;
     padding: 20px;
+    float: left;
 }
 
-.leftbar {
+.leftnavbar {
     background-color: bisque;
     text-align: center;
     float: left;
@@ -23,9 +24,8 @@ body {
 
 }
 
-.maincolumn {
+.content {
     background-color: blueviolet;
-    display: block;
     text-align: center;
     float: left;
     width: 80%;
@@ -34,19 +34,19 @@ body {
 
 .footer {
     background-color: rosybrown;
-    float: center;
+    float: left;
     text-align: center;
-    padding-top: 20px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 800px) {
 
-    .leftbar, .maincolumn {
+    .leftnavbar, .content {
         width: 100%;
         padding: 0;
 
     }
-
+}
 @media screen and (max-width: 400px) {
         .header {
             float: none;
