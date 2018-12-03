@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    /* 2nd solution */ flex-wrap: wrap;
+    }
+
+
+.header {
+    height: 200px;
+    /* width: 100%; */
+    /* 2nd solution */ flex: 100%;
+    background-color: blueviolet;
+}
+
+.sideDiv{
+    /* width: 30%; */
+/* 2nd solution */ flex: 30%;
+    height: 400px;
+    background-color: brown;
+}
+
+.content {
+    /* width: 70%; */
+/* 2nd solution */ flex: 70%;
+    height: 400px;
+    background-color: chartreuse;
+}
+
+.footer {
+    height: 200px;
+    /* width: 100%; */
+    /* 2nd solution */ flex: 100%;
+    background-color: darkgoldenrod;

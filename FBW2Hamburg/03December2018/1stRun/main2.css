@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+
+.header {
+    height: 200px;
+    flex: 100%;
+    background-color: blueviolet;
+}
+
+.leftSide{
+    flex: 25%;
+    height: 400px;
+    background-color: brown;
+}
+
+.rightSide{
+    flex: 25%;
+    height: 400px;
+    background-color: brown;
+}
+.content {
+    flex: 50%;
+    height: 400px;
+    background-color: chartreuse;
+}
+
+.footer {
+    height: 200px;
+    flex: 100%;
+    background-color: darkgoldenrod;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .leftSide, .rightSide, .content {
+            flex: 100%;
+    
+        }
+    }
+    
