@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+.flexContainer {
+    display: flex;
+    background-color: black;
+    
+}
+
+.main1 {
+    flex: 1;
+    background-color: aqua;
+    height: 600px;
+    margin: 5px;
+}
+
+.main2 {
+    flex: 4;
+    background-color: bisque;
+    height: 600px;
+    margin: 5px;
+    flex-direction: column;
+    display: flex;
+}
+
+.main2>.header {
+    background-color: green;
+    height: 100px;
+    
+}
+.main2>.content {
+    background-color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.main2>.footer {
+    background-color: green;
+    height: 100px;
+}
+
+.content>.article {
+    background-color: coral;
+    flex: 3;
+}
+.content>.aside {
+    background-color: cornflowerblue;
+    flex: 1; 
+}
