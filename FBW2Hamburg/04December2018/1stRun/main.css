@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    /* height: 100vh; */
+    margin: 0;
+}
+
+.flexContainer {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: row;
+}
+
+.leftMain {
+    flex: 1;
+    min-height: 100vh;
+    background-color: blue;
+}
+.rightMain {
+    flex: 5;
+    min-height: 100vh;
+    background-color: brown;
+    flex-direction: column;
+    display: flex;
+}
+
+.rightHeader {
+    /* height: 20vh;
+    width: 100%; why we are not doing height and width?*/ 
+    flex: 1;
+    background-color: yellow;
+}
+
+.rightContent {
+    display: flex;
+    flex: 4;
+    background-color: green;
+    flex-direction: row;
+}
+
+.rightContentArticle{
+    flex-direction: column;
+    flex: 4;
+    display: flex;
+    background-color: gray;
+    /* width: 80%;
+    min-height: 100vh;  why not height and width?*/
+}
+
+.rightContentArticleMain{
+    flex: 4;
+    background-color: cornflowerblue;
+}
+
+.rightContentArticleFooter{
+    flex: 1;
+    background-color: aquamarine;
+}
+
+.rightContentAside{
+    flex: 1;
+    background-color: lightcoral;
+}

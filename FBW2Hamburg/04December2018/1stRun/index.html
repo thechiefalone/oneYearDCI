@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flex Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+<div class="flexContainer"> <!--flex-direction is row-->
+    <div class="leftMain"></div>
+    <div class="rightMain"> <!--flex-direction is column -- why?-->
+        <div class="rightHeader"></div>
+        <div class="rightContent"> <!--flex-direction is row -- why?-->
+            <div class="rightContentArticle"> <!--flex-direction is column -- why?-->
+                <div class="rightContentArticleMain"></div>
+                <div class="rightContentArticleFooter"></div>
+            </div>
+            <div class="rightContentAside"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
