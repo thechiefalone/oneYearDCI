@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.flexContainer {
+    display: flex;
+    background-color: aquamarine;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+.nav{
+    background-color: brown;
+    min-height: 100vh;
+    min-width: 10vw;
+
+}
+
+.main{
+    background-color: blue;
+    min-height: 100vh;
+    min-width: 90vw;
+}
+
+.header{
+    background-color: bisque;
+    min-height: 20vh;
+}
+.article{
+    background-color: green;
+    min-height: 60vh;
+}
+.footer{
+    background-color: bisque;
+    min-height: 20vh;
+}
