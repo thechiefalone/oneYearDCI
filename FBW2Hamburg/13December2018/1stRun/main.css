@@ -89,6 +89,7 @@ body {
 
     }
     .footer>p {
+        justify-content: center;
         text-align: center
     }
 }
