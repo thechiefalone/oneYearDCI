@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 200px 100px 150px;
+    padding: 10px;
+    background-color: aquamarine;
+    align-content: center;
+    height: 100vh;
+}
+.grid-container>div{
+    font-size: 40px;
+    text-align: center;
+    background-color: burlywood;
+    border: 1px solid black;
+}
+.grid-container>div:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
