@@ -1,6 +1,6 @@
 article{
     /* font-family: 'Berkshire Swash', cursive; */
-    font-family: Benthol;
+    font-family: myFont;
     background-color: aquamarine;
     border: 5px solid black;
     text-align: center;
@@ -10,6 +10,6 @@ article{
 }
 
 @font-face {
-    font-family: 'Benthol';
+    font-family: 'myFont';
     src: url(./fonts/Benthol.ttf) 
 }
