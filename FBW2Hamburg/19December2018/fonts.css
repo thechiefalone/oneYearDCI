@@ -1,0 +1,15 @@
+article{
+    /* font-family: 'Berkshire Swash', cursive; */
+    font-family: Benthol;
+    background-color: aquamarine;
+    border: 5px solid black;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+@font-face {
+    font-family: 'Benthol';
+    src: url(./fonts/Benthol.ttf) 
+}
