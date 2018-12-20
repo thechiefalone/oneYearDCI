@@ -1,0 +1,22 @@
+body div:last-of-type{
+    color: greenyellow;
+}
+
+/* same thing with another method */
+
+p+div{
+    color: black !important;
+}
+
+div{
+    color: blue;
+}
+
+a[target]{
+    color: lightcoral;
+    font-weight: bold;
+}
+
+p::after{
+    content: 'i am added by CSS'
+}
