@@ -1,0 +1,18 @@
+.someList {
+    list-style-image: url(http://images.rottentomatoes.com/images/tomatoes/small_fresh.gif);
+    list-style-position: inside;
+}
+
+.someList>li{
+    border: 1px solid black;
+
+}
+
+.someList1 {
+    list-style-image: url(http://images.rottentomatoes.com/images/tomatoes/small_fresh.gif);
+    list-style-position: outside;
+}
+
+.someList1>li{
+    border: 1px solid black;
+}
