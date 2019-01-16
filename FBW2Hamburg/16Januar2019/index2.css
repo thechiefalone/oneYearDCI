@@ -1,0 +1,49 @@
+div.translated-div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: translate(-100px,50px);
+    margin: 100px;
+}
+
+div.rotated-div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: rotate(30deg);
+    margin: 100px;
+}
+
+div.scaled-div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: scale(2,1);
+    margin: 100px;
+}
+
+div.skewed-div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: scale(2,1);
+    margin: 100px;
+}
+
+div.matrix-div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    font-size: 4rem;
+    transform: scale(2,1);
+    margin: 100px;
+}
