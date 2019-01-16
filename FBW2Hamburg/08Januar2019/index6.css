@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+p {
+    font-size: 3.2rem;
+}
+
+.header {
+    margin: 2rem 1rem;
+    background-image: url(https://i.pinimg.com/originals/d3/be/a9/d3bea974324c998b10350a50c2f21b18.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 80vh;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+    -webkit-clip-path: polygon(0 4%, 0% 100%, 100% 100%);
+    clip-path: polygon(0 4%, 0% 100%, 100% 100%);
+    box-shadow: inset -16px gold;
+}

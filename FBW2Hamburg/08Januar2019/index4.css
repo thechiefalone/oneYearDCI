@@ -1,0 +1,13 @@
+p::after{
+    content: ' & you are a lier';
+    white-space: pre;
+    background-color: red;
+    color: blue;
+}
+
+p::before{
+    content: ' What can you do? ';
+    white-space: pre;
+    background-color: green;
+    color: blueviolet;
+}

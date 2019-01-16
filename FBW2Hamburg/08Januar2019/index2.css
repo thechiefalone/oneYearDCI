@@ -1,0 +1,12 @@
+a.specialA:link{
+    color: red;
+}
+a.specialA:visited{
+    color: green;
+}
+a.specialA:hover{
+    color: gray;
+}
+a.specialA:active{
+    color: blue;
+}
