@@ -1,0 +1,17 @@
+@import "_setting";
+
+%fontStyle{
+    color: red;
+    font-size: 2rem;
+}
+
+.container{
+    &>.article{
+        &>.title{
+            @extend %fontStyle;
+        }
+        &>.content{
+            color: blue;
+        }
+    }
+}
