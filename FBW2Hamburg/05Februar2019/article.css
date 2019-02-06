@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+article:nth-child(1), article:nth-child(2), article:nth-child(3), article:nth-child(4), article:nth-child(5), article:nth-child(6), article:nth-child(7), article:nth-child(8), article:nth-child(9), article:nth-child(10), article:nth-child(11), article:nth-child(12), article:nth-child(13), article:nth-child(14), article:nth-child(15), article:nth-child(16), article:nth-child(17), article:nth-child(18), article:nth-child(19), article:nth-child(20) {
+  height: 20px;
+  width: 100vw;
+  border: 1px solid black;
+}
+
+article:nth-child(1) {
+  background-color: #f2f2f2;
+}
+
+article:nth-child(2) {
+  background-color: #e6e6e6;
+}
+
+article:nth-child(2)::after {
+  content: "2";
+}
+
+article:nth-child(3) {
+  background-color: green;
+}
+
+article:nth-child(4) {
+  background-color: #cccccc;
+}
+
+article:nth-child(4)::after {
+  content: "4";
+}
+
+article:nth-child(5) {
+  background-color: #bfbfbf;
+}
+
+article:nth-child(6) {
+  background-color: #b3b3b3;
+}
+
+article:nth-child(6)::after {
+  content: "6";
+}
+
+article:nth-child(7) {
+  background-color: #a6a6a6;
+}
+
+article:nth-child(8) {
+  background-color: #999999;
+}
+
+article:nth-child(8)::after {
+  content: "8";
+}
+
+article:nth-child(9) {
+  background-color: #8c8c8c;
+}
+
+article:nth-child(10) {
+  background-color: gray;
+}
+
+article:nth-child(10)::after {
+  content: "10";
+}
+
+article:nth-child(11) {
+  background-color: #737373;
+}
+
+article:nth-child(12) {
+  background-color: #666666;
+}
+
+article:nth-child(12)::after {
+  content: "12";
+}
+
+article:nth-child(13) {
+  background-color: #595959;
+}
+
+article:nth-child(14) {
+  background-color: #4d4d4d;
+}
+
+article:nth-child(14)::after {
+  content: "14";
+}
+
+article:nth-child(15) {
+  background-color: #404040;
+}
+
+article:nth-child(16) {
+  background-color: #333333;
+}
+
+article:nth-child(16)::after {
+  content: "16";
+}
+
+article:nth-child(17) {
+  background-color: #262626;
+}
+
+article:nth-child(18) {
+  background-color: #1a1a1a;
+}
+
+article:nth-child(18)::after {
+  content: "18";
+}
+
+article:nth-child(19) {
+  background-color: #0d0d0d;
+}
+
+article:nth-child(20) {
+  background-color: black;
+}
+
+article:nth-child(20)::after {
+  content: "20";
+}
+/*# sourceMappingURL=article.css.map */

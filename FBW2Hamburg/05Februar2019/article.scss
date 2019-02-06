@@ -1,0 +1,27 @@
+@import "_settings";
+
+%height {
+    height: 20px;
+    width: 100vw;
+    border: 1px solid black;
+}
+
+@for $var from 1 to 21 {
+    #{"article:nth-child("+$var+")"} {
+        @extend %height;
+
+        @if $var==3 {
+            background-color: green;
+        }
+
+        @else {
+            background-color: darken(white, $var*5%);
+        }
+    }
+
+    #{"article:nth-child("+$var+")::after"} {
+        @if $var%2 == 0 {
+            content: $var+"";
+        }
+    }
+}
