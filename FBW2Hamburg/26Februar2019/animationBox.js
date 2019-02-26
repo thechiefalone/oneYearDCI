@@ -11,10 +11,10 @@ window.onload = function () {
         else {
             pos--;
         }
-        if (pos === 289) flag = false;
+        if (pos === 288) flag = false;
         if (pos === 1) flag = true;
 
-        small.style.left = pos + "px";
+        small.style.l1eft = pos + "px";
         console.log(pos);
     }, 5);
 
