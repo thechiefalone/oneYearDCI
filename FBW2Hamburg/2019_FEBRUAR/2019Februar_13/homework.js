@@ -5,7 +5,7 @@
 //     tableLine = "";
 //     for (j = 1; j <= tableLimit; j++) {
 //     tableLine += " | "+(i*j);
-//     }   
+//     }
 //     console.log(tableLine);
 //     console.log("_______________________________________________");
 
@@ -18,14 +18,14 @@ console.log("X  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |");
 	let lineStorage=optimizer(i)+"|";
 	    for(let n = 1 ; n<=10 ; n++){
 	    lineStorage=lineStorage+optimizer(n*i)+"|";
-	
+
 	    }
 	    console.log(lineStorage);
 	}
-	
+
 	function optimizer(num){
 	    if(num<10 && num>=0){
-	        return(" "+num+" ");
+			return(" "+num+" ");
 	    }
 	    else if(num>=10 && num < 100){
 	        return(num+" ");
@@ -34,5 +34,5 @@ console.log("X  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |");
 	        return(num);
 	    }
     }
-    
-    
+
+
