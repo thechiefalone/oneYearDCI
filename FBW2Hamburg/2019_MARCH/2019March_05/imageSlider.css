@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    width: 50vw;
+    height: 40vh;
+    overflow: hidden;
+
+}
+.container img:nth-child(1){
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.container img{
+    position: absolute;
+    width: 50vw;
+    height: 40vh;
+    top: -40vh;
+    left: -50vw;
+    transition: all 4s;
+}
+
