@@ -13,30 +13,14 @@ window.onload = function () {
     let btn2 = document.createElement("button");
     btn2.innerText = "Step2";
     btn2.onclick = function () {
-        if (materials.length != 0) {
-            let answer = confirm("Are you sure want to pass Step1");
-            if (answer) {
-                stepClick(2)
-                btn1.disabled = true;
-            }
-        } else {
-            alert("hey!!! You have to add some materials dude:P");
-        }
+        stepClick(2)
     };
     container.appendChild(btn2);
 
     let btn3 = document.createElement("button");
     btn3.innerText = "Step3";
     btn3.onclick = function () {
-        if (students.length != 0) {
-            let answer = confirm("Are you sure want to pass Step2");
-            if (answer) {
-                stepClick(3)
-                btn2.disabled = true;
-            }
-        } else {
-            alert("hey!!! You have to add some students dude:P");
-        }
+        stepClick(3)
     };
     container.appendChild(btn3);
 
@@ -53,12 +37,12 @@ window.onload = function () {
 
     let step1Text = document.createElement("input");
     step1Text.type = "text";
-    stepDiv1.appendChild(step1Text);
-    step1Text.onkeypress = function (key) {
+    step1Text.onkeypress = function(key) {
         if (key.keyCode === 13) {
             saveMaterial();
         }
     }
+    stepDiv1.appendChild(step1Text);
 
     let step1button = document.createElement("button");
     step1button.innerText = "Enter";
@@ -77,12 +61,12 @@ window.onload = function () {
 
     let step2Text = document.createElement("input");
     step2Text.type = "text";
-    stepDiv2.appendChild(step2Text);
-    step2Text.onkeypress = function (key) {
+    step2Text.onkeypress = function(key) {
         if (key.keyCode === 13) {
             saveStudent();
         }
     }
+    stepDiv2.appendChild(step2Text);
 
     let step2button = document.createElement("button");
     step2button.innerText = "Enter";
@@ -123,6 +107,7 @@ window.onload = function () {
                         input.onkeyup = function () {
                             if (document.getElementById("resultTable")) {
                                 document.getElementById("resultTable").remove();
+                                document.getElementById("hrId").remove();
                                 buildResultTable();
                             }
 
@@ -139,9 +124,6 @@ window.onload = function () {
                 buildResultTable()
             };
             stepDiv3.appendChild(resultButton);
-            let resultDiv = document.createElement("div");
-            resultDiv.id = "resultDiv";
-            stepDiv3.appendChild(resultDiv);
         }
 
     }
@@ -181,48 +163,42 @@ window.onload = function () {
     }
 
     function buildResultTable() {
-
-        if (materials.length != 0 && students.length != 0) {
-            let table = document.createElement("table");
-            let tableHeader = table.createTHead();
-            let headRow = tableHeader.insertRow(0);
-            for (let h = 0; h <= materials.length + 1; h++) {
-                let headCell = headRow.insertCell(h);
-                if (h == 0) {
-                    headCell.innerText = "Student Name";
-                } else {
-
-                    if (h == materials.length + 1) {
-                        headCell.innerText = "Average";
+        if (!document.getElementById("resultTable")) {
+            if (materials.length != 0 && students.length != 0) {
+                let table = document.createElement("table");
+                table.id = "resultTable";
+                let tableHeader = table.createTHead();
+                let headRow = tableHeader.insertRow(0);
+                for (let h = 0; h <= materials.length; h++) {
+                    let headCell = headRow.insertCell(h);
+                    if (h == 0) {
+                        headCell.innerText = "Student Name";
                     } else {
                         headCell.innerText = materials[h - 1];
                     }
                 }
-            }
-            let tableBody = table.createTBody();
-            for (let i = 0; i < students.length; i++) {
-                let row = tableBody.insertRow(i);
-                let sum = 0;
-                for (let x = 0; x <= materials.length + 1; x++) {
-                    let cell = row.insertCell(x);
-                    if (x == 0) {
-                        cell.innerText = students[i];
-                    } else {
-                        if (x == materials.length + 1) {
-                            cell.innerText = (sum / materials.length).toFixed(2);
+                let tableBody = table.createTBody();
+                for (let i = 0; i < students.length; i++) {
+                    let row = tableBody.insertRow(i);
+                    for (let x = 0; x <= materials.length; x++) {
+                        let cell = row.insertCell(x);
+                        if (x == 0) {
+                            cell.innerText = students[i];
                         } else {
+                            // let input=document.createElement("input");
+                            // input.type="text";
+                            // input.id="input_"+i+"_"+(x-1);
                             let input = document.getElementById("input_" + i + "_" + (x - 1));
                             cell.innerText = input.value;
-                            sum += parseFloat(input.value);
                         }
-
                     }
                 }
-            }
-            let resultDiv = document.getElementById("resultDiv");
-            resultDiv.innerText = "";
-            resultDiv.appendChild(table);
-        }
+                let hr = document.createElement("hr");
+                hr.id = "hrId";
+                stepDiv3.appendChild(hr);
 
+                stepDiv3.appendChild(table);
+            }
+        }
     }
 }
