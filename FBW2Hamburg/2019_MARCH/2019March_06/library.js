@@ -125,7 +125,6 @@ window.onload = function () {
                                 document.getElementById("resultTable").remove();
                                 buildResultTable();
                             }
-
                         };
                         cell.appendChild(input);
                     }
