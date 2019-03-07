@@ -120,6 +120,7 @@ window.onload = function () {
                         let input = document.createElement("input");
                         input.type = "number";
                         input.id = "input_" + i + "_" + (x - 1);
+                        input.value="0";
                         input.onkeyup = function () {
                             if (document.getElementById("resultTable")) {
                                 document.getElementById("resultTable").remove();
