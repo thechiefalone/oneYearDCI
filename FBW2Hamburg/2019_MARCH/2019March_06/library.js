@@ -28,6 +28,7 @@ window.onload = function () {
     let btn3 = document.createElement("button");
     btn3.innerText = "Step3";
     btn3.onclick = function () {
+        if(btn2.disabled!=true){
         if (students.length != 0) {
             let answer = confirm("Are you sure want to pass Step2");
             if (answer) {
@@ -37,7 +38,14 @@ window.onload = function () {
         } else {
             alert("hey!!! You have to add some students dude:P");
         }
-    };
+    }
+else
+    {
+        alert("You will reset everything!!!");
+        stepClick(3);
+
+    }
+};
     container.appendChild(btn3);
 
     let stepsContainer = document.createElement("div");
