@@ -118,7 +118,7 @@ window.onload = function () {
                         cell.innerText = students[i];
                     } else {
                         let input = document.createElement("input");
-                        input.type = "text";
+                        input.type = "number";
                         input.id = "input_" + i + "_" + (x - 1);
                         input.onkeyup = function () {
                             if (document.getElementById("resultTable")) {
