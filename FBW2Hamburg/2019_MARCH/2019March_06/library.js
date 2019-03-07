@@ -1,11 +1,7 @@
-// let materials = ["Math", "Science", "English", "German"];
-// let students = ["Ahmad", "Petros", "Wisam", "Omar", "Farooq"];
-
 window.onload = function () {
-    let materials=[];
-    let students=[];
+    let materials = [];
+    let students = [];
     let container = document.getElementById("container");
-    //BUTTONS
 
     let btn1 = document.createElement("button");
     btn1.innerText = "Step1";
@@ -28,55 +24,54 @@ window.onload = function () {
     };
     container.appendChild(btn3);
 
-    //DIV
-
     let stepsContainer = document.createElement("div");
     stepsContainer.id = "stepsContainer";
     container.appendChild(stepsContainer);
 
-        //StepDiv1
     let stepDiv1 = document.createElement("div");
     stepsContainer.appendChild(stepDiv1);
 
-    let step1Label=document.createElement("lable");
-    step1Label.innerText="Material Name"
-    stepDiv1.appendChild(step1Label);
+    let step1Lable = document.createElement("lable");
+    step1Lable.innerText = "Material name";
+    stepDiv1.appendChild(step1Lable);
 
-    let step1Text=document.createElement("input");
-    step1Text.type="text";
+    let step1Text = document.createElement("input");
+    step1Text.type = "text";
     stepDiv1.appendChild(step1Text);
 
-    let step1Button=document.createElement("button");
-    step1Button.innerText="Enter";
-    stepDiv1.appendChild(step1Button);
-    step1Button.onclick=function(){saveMaterial()};
+    let step1button = document.createElement("button");
+    step1button.innerText = "Enter";
+    stepDiv1.appendChild(step1button);
+    step1button.onclick = function () {
+        saveMaterial()
+    };
 
-        //StepDiv2
     let stepDiv2 = document.createElement("div");
     stepDiv2.style.display = "none";
     stepsContainer.appendChild(stepDiv2);
 
-    let step2Label=document.createElement("lable");
-    step2Label.innerText="Student Name"
-    stepDiv2.appendChild(step2Label);
+    let step2Lable = document.createElement("lable");
+    step2Lable.innerText = "Student name";
+    stepDiv2.appendChild(step2Lable);
 
-    let step2Text=document.createElement("input");
-    step2Text.type="text";
+    let step2Text = document.createElement("input");
+    step2Text.type = "text";
     stepDiv2.appendChild(step2Text);
 
-    let step2Button=document.createElement("button");
-    step2Button.innerText="Enter";
-    stepDiv2.appendChild(step2Button);
-    step2Button.onclick=function(){saveStudent()};
+    let step2button = document.createElement("button");
+    step2button.innerText = "Enter";
+    step2button.onclick = function () {
+        saveStudent()
+    };
+    stepDiv2.appendChild(step2button);
 
-
-        //StepDiv3
     let stepDiv3 = document.createElement("div");
     stepDiv3.style.display = "none";
     stepsContainer.appendChild(stepDiv3);
 
     function buildTable() {
-        if(materials.length!=0 && students.length!=0){
+
+        if (materials.length != 0 && students.length != 0) {
             let table = document.createElement("table");
             let tableHeader = table.createTHead();
             let headRow = tableHeader.insertRow(0);
@@ -98,22 +93,38 @@ window.onload = function () {
                     } else {
                         let input = document.createElement("input");
                         input.type = "text";
+                        input.id = "input_" + i + "_" + (x - 1);
+                        input.onchange = function () {
+                            if (document.getElementById("resultTable")) {
+                                document.getElementById("resultTable").remove();
+                                document.getElementById("hrId").remove();
+                                buildResultTable();
+                            }
+
+                        };
                         cell.appendChild(input);
                     }
                 }
             }
-            stepDiv3.innerHTML="";
+            stepDiv3.innerHTML = "";
             stepDiv3.appendChild(table);
+            let resultButton = document.createElement("button");
+            resultButton.innerText = "Result";
+            resultButton.onclick = function () {
+                buildResultTable()
+            };
+            stepDiv3.appendChild(resultButton);
         }
+
     }
 
     function stepClick(num) {
+
         switch (num) {
             case 1:
                 stepDiv1.style.display = "block";
                 stepDiv2.style.display = "none";
                 stepDiv3.style.display = "none";
-
                 break;
             case 2:
                 stepDiv1.style.display = "none";
@@ -124,18 +135,60 @@ window.onload = function () {
                 stepDiv1.style.display = "none";
                 stepDiv2.style.display = "none";
                 stepDiv3.style.display = "block";
-                buildTable()
+                buildTable();
                 break;
+
+
         }
     }
 
-    function saveMaterial(){
+    function saveMaterial() {
         materials.push(step1Text.value);
-        step1Text.value="";
-    }
-    function saveStudent(){
-        students.push(step2Text.value);
-        step2Text.value="";
+        step1Text.value = "";
     }
 
+    function saveStudent() {
+        students.push(step2Text.value);
+        step2Text.value = "";
+    }
+
+    function buildResultTable() {
+        if (!document.getElementById("resultTable")) {
+            if (materials.length != 0 && students.length != 0) {
+                let table = document.createElement("table");
+                table.id = "resultTable";
+                let tableHeader = table.createTHead();
+                let headRow = tableHeader.insertRow(0);
+                for (let h = 0; h <= materials.length; h++) {
+                    let headCell = headRow.insertCell(h);
+                    if (h == 0) {
+                        headCell.innerText = "Student Name";
+                    } else {
+                        headCell.innerText = materials[h - 1];
+                    }
+                }
+                let tableBody = table.createTBody();
+                for (let i = 0; i < students.length; i++) {
+                    let row = tableBody.insertRow(i);
+                    for (let x = 0; x <= materials.length; x++) {
+                        let cell = row.insertCell(x);
+                        if (x == 0) {
+                            cell.innerText = students[i];
+                        } else {
+                            // let input=document.createElement("input");
+                            // input.type="text";
+                            // input.id="input_"+i+"_"+(x-1);
+                            let input = document.getElementById("input_" + i + "_" + (x - 1));
+                            cell.innerText = input.value;
+                        }
+                    }
+                }
+                let hr = document.createElement("hr");
+                hr.id = "hrId";
+                stepDiv3.appendChild(hr);
+
+                stepDiv3.appendChild(table);
+            }
+        }
+    }
 }
