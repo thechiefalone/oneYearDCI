@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="registrationForm.css">
+    <script src="registrationForm.js"></script>
+</head>
+
+<body>
+    <div id="personal-info">
+        <h2>Personal Information</h2>
+        <table>
+            <tr>
+                <td><label for="first-name">First Name</label></td>
+                <td><input type="text" name="first-name" id="firstName" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="last-name">Last Name</label></td>
+                <td><input type="text" name="last-name" id="lastName"></td>
+            </tr>
+
+            <tr>
+                <td><label for="birth-date">Birth Date</label></td>
+                <td><input type="date" name="birth-date" id="birthDate"></td>
+            </tr>
+
+            <tr>
+                <td><label for="nationality">Nationality</label></td>
+                <td><input type="text" name="nationality" id="nationality"></td>
+            </tr>
+
+            <tr>
+                <td><label for="phone-number">Phone Number</label></td>
+                <td><input type="number" name="phone-number" id="phoneNumber"></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <button id="btn1" onclick="personalInformationSaveStep()">Next Step</button>
+
+    <div id="address-info">
+
+        <h2>Address Information</h2>
+        <table>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" name="address" id="address"></td>
+            </tr>
+
+            <tr>
+                <td><label for="postcode">Post Code</label></td>
+                <td><input type="text" name="postcode" id="postCode"></td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="btn2" onclick="addressInformationSaveStep()">Next Step</button>
+
+    <div id="profile-info">
+
+        <h2>Profile Information</h2>
+        <table>
+            <tr>
+                <td><label for="profile-picture">Profile Picture</label></td>
+                <td><input type="file" name="profile-picture" id="profilePicture" accept="image/"></td>
+            </tr>
+            <tr>
+                <td><label for="username">User Name</label></td>
+                <td><input type="text" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="repassword">Password Again</label></td>
+                <td><input type="password" name="repassword" id="repassword"></td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="btn3" onclick="profileInformationSaveStep()">Submit</button>
+
+    <div id="result"></div>
+
+</body>
+
+</html>
