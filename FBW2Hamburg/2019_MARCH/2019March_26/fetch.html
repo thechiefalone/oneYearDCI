@@ -23,13 +23,73 @@
             <option value="city">City</option>
             <option value="country">Country</option>
     </select>
+
     <button onclick="buttonClick()">Get Image</button>
-    <img id="img-container1">
-    <img id="img-container2">
-    <img id="img-container3">
-    <img id="img-container4">
-    <img id="img-container5">
-    <img id="img-container6">
+
+    <h2 style="text-align:center">Image Gallery For Your Hashtag and Category</h2>
+
+<div class="row">
+  <div class="column">
+    <img id="img-container1" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="img-container2" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="img-container3" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="img-container4" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img id="img-container-slide1" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img id="img-container-slide2" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img id="img-container-slide3" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img id="img-container-slide4" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" id="img-container-col1" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" id="img-container-col2" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" id="img-container-col3" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" id="img-container-col4" style="width:100%" onclick="currentSlide(4)">
+    </div>
+  </div>
+</div>
+
 </body>
 
 </html>
