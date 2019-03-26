@@ -6,12 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fetch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="fetch.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="fetch.css">
     <script src="fetch.js"></script>
 </head>
 
 <body>
-    <div id="container"></div>
+    <label for="search">Write your hashtag</label>
+    <input name="search" type="text" id="search">
+    <label for="category">Select your category</label>
+    <select name="category" id="category">
+            <option value="">--Please choose an option--</option>
+            <option value="nature">Nature</option>
+            <option value="music">Music</option>
+            <option value="people">People</option>
+            <option value="animal">Animal</option>
+            <option value="city">City</option>
+            <option value="country">Country</option>
+    </select>
+    <button onclick="buttonClick()">Get Image</button>
+    <img id="img-container1">
+    <img id="img-container2">
+    <img id="img-container3">
+    <img id="img-container4">
+    <img id="img-container5">
+    <img id="img-container6">
 </body>
 
 </html>

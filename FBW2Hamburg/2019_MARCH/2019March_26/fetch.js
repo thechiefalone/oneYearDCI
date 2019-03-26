@@ -1,16 +1,25 @@
-var apiKey = "085e9cd33056f583efc844c7ec4f5f72";
-var inputCity = "london"
+var apiKey = "12000491-41fc68d8c365df909e022ceb6";
 
-window.onload = () => {
+function buttonClick(){
+    var keyword = document.getElementById("search").value;
+    var category = document.getElementById("category").value;
 
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + inputCity + "&APPID=" + apiKey).
+    fetch("https://pixabay.com/api/?key="+apiKey+"&q="+keyword+"&image_type=photo&category="+category+"&pretty=true").
     then(function (response) {
         console.log(response.status);
         if (response.status !== 200) {
             return;
         }
         response.json().then(function (data) {
-            console.log(data.name);
+            getImage(data);
         })
     });
+}
+
+function getImage(anything){
+    console.log(anything);
+    for (let i=1;i<7;i++){
+        let img = document.getElementById("img-container"+i);
+        img.src = anything.hits[i].largeImageURL;
+    }
 }
