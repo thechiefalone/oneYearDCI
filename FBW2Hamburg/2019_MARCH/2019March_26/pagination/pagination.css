@@ -6,16 +6,16 @@
     display: grid;
     grid-template: auto / 30vw 70vw;
     grid-gap: 5px;
-    background-color: rgb(33, 201, 243);
+    background-color: white;
     padding: 5px;
 }
 
-#container > div {
+#container>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 10px 0;
     font-size: 30px;
-  }
+}
 
 .images {
     width: 100px;
@@ -30,25 +30,29 @@
     position: relative;
 }
 
-.zoom-out {
-    position: absolute;
-    width: 550px;
-    max-height: 40vh;
-    border: 2px solid white;
-    top: 0;
-    left: 0;
-
+#img-container img {
+    filter: grayscale(100%);
+    transition: 1s;
 }
 
-#big-black {
-    color: black;
-    font-size: 2rem;
-    position: absolute;
-    top: -20px;
-    right: 20px;
-  }
+#img-container img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
 
-.zoom-in {
-    transition: transform ease-in .3s;
-    transform: scale(1);
+.pagination a {
+    color: black;
+    float: left;
+    padding: 10px 7px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
 }

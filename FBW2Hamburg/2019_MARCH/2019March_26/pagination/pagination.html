@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pagination</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="pagination.css">
-    <script src="pagination.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./pagination.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./lightbox.min.css">
+
+    <script src="./pagination.js"></script>
+    <script src="./lightbox-plus-jquery.min.js"></script>
 </head>
 
 <body>
     <div id="container">
-            <p id="big-black"> ✖ </p>
+        <!-- <p id="big-black"> ✖ </p> -->
         <div id="button-container">
             <label for="search">Write your hashtag</label><br>
             <input name="search" type="text" id="search" value="computer"><br>
@@ -36,9 +39,25 @@
                 <option value=150>150</option>
                 <option value=200>200</option>
             </select>
+            <br>
+            <button onclick="back()">&laquo;</button>
+            <button onclick="buttonClick()">Get Images</button>
+            <button onclick="next()">&raquo;</button>
 <br>
-            <button onclick="buttonClick()">Get Image</button>
-            <button onclick="next()">NEXT</button>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a class="pagination-a active"  href="#">1</a> <!-- class="active" will be added  -->
+                <a class="pagination-a"  href="#">2</a>
+                <a class="pagination-a"  href="#">3</a>
+                <a class="pagination-a"  href="#">4</a>
+                <a class="pagination-a"  href="#">5</a>
+                <a class="pagination-a"  href="#">6</a>
+                <a class="pagination-a"  href="#">7</a>
+                <a class="pagination-a"  href="#">8</a>
+                <a class="pagination-a"  href="#">9</a>
+                <a class="pagination-a"  href="#">10</a>
+                <a href="#">&raquo;</a>
+            </div>
         </div>
         <div id="img-container">IMAGES<br>will be shown here
         </div>

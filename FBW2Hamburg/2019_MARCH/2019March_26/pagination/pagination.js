@@ -35,24 +35,35 @@ function next() {
     });
     counter++;
 }
+function back() {
+    var keyword = document.getElementById("search").value;
+    var category = document.getElementById("category").value;
+    perPageValue = document.getElementById("per-page").value;
+    fetch("https://pixabay.com/api/?key=" + apiKey + "&q=" + keyword + "&image_type=photo&category=" + category + "&pretty=true&per_page=" + perPageValue + "&page=" + counter).
+    then(function (response) {
+        if (response.status !== 200) {
+            return;
+        }
+        response.json().then(function (data) {
+            getImage(data)
+            console.log(data);
+        })
+    });
+    counter--;
+}
 
 function getImage(anyData) {
     var div = document.getElementById("img-container");
     div.innerHTML = "";
     for (let i = 0; i < perPageValue; i++) {
         img = document.createElement("img");
-        div.appendChild(img);
+        a = document.createElement("a");
+        div.appendChild(a);
+        a.appendChild(img);
+        a.setAttribute("href",anyData.hits[i].largeImageURL);
+        a.setAttribute("data-lightbox","mygallery");
         img.src = anyData.hits[i].largeImageURL;
         img.setAttribute("class","images");
-        img.setAttribute("onclick","imgClickOpen(this)");
+        // document.getElementsByClassName("pagination-a")[i].setAttribute("class","active");
     }
 }
-
-function imgClickOpen(img) {
-    img.setAttribute("class","zoom-out");
-}
-
-// function imgClickClose(img){
-//     img.setAttribute("class","zoom-out");
-
-// }
