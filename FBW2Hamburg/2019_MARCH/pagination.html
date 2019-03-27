@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,33 +9,40 @@
     <link rel="stylesheet" type="text/css" media="screen" href="pagination.css">
     <script src="pagination.js"></script>
 </head>
+
 <body>
-    <label for="search">Write your hashtag</label>
-    <input name="search" type="text" id="search">
-    <label for="category">Select your category</label>
-    <select name="category" id="category">
-            <option value="">--Please choose an option--</option>
-            <option value="nature">Nature</option>
-            <option value="music">Music</option>
-            <option value="people">People</option>
-            <option value="animal">Animal</option>
-            <option value="city">City</option>
-            <option value="country">Country</option>
-    </select>
-    <label for="per-page">How many picture per page?</label>
-    <select name="per-page" id="per-page">
-            <option value="">--Please choose an option--</option>
-            <option value=25>25</option>
-            <option value=50>50</option>
-            <option value=75>75</option>
-            <option value=100>100</option>
-            <option value=150>150</option>
-            <option value=200>200</option>
-    </select>
-
-    <button onclick="buttonClick()">Get Image</button>
-    <div id="img-container"></div>
-    <button onclick="next()">NEXT</button>
-
+    <div id="container">
+            <p id="big-black"> ✖ </p>
+        <div id="button-container">
+            <label for="search">Write your hashtag</label><br>
+            <input name="search" type="text" id="search" value="computer"><br>
+            <label for="category">Select your category</label>
+            <select name="category" id="category">
+                <option value="">--Please choose an option--</option>
+                <option value="nature">Nature</option>
+                <option value="music">Music</option>
+                <option value="people">People</option>
+                <option value="animal">Animal</option>
+                <option value="city">City</option>
+                <option value="country">Country</option>
+            </select><br>
+            <label for="per-page">How many picture per page?</label>
+            <select name="per-page" id="per-page">
+                <option value="">--Please choose an option--</option>
+                <option value=25>25</option>
+                <option value=50>50</option>
+                <option value=75>75</option>
+                <option value=100>100</option>
+                <option value=150>150</option>
+                <option value=200>200</option>
+            </select>
+<br>
+            <button onclick="buttonClick()">Get Image</button>
+            <button onclick="next()">NEXT</button>
+        </div>
+        <div id="img-container">IMAGES<br>will be shown here
+        </div>
+    </div>
 </body>
+
 </html>
