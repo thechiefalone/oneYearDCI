@@ -1,7 +1,7 @@
 var apiKey = "12000491-41fc68d8c365df909e022ceb6";
 var perPageValue;
 var img;
-var counter = 2;
+var counter = 1;
 
 function buttonClick() {
     var keyword = document.getElementById("search").value;
@@ -20,6 +20,8 @@ function buttonClick() {
 }
 
 function next() {
+    counter++;
+
     var keyword = document.getElementById("search").value;
     var category = document.getElementById("category").value;
     perPageValue = document.getElementById("per-page").value;
@@ -33,11 +35,10 @@ function next() {
             console.log(data);
         })
     });
-    counter++;
 }
 
 function back() {
-    if (counter >= 2) {
+    if (counter > 1) {
         counter--;
         var keyword = document.getElementById("search").value;
         var category = document.getElementById("category").value;
