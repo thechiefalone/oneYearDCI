@@ -9,11 +9,11 @@ html{
     display: grid;
     grid-template: auto / 30vw 70vw;
     grid-gap: 0.5rem;
-    background-color: white;
+    background-color: rgb(39, 83, 148);
     padding: 0.5rem;
 }
 
-#container > div {
+#container>div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 1rem 0;
@@ -43,19 +43,23 @@ html{
     transform: scale(1.1);
 }
 
-.pagination > a {
+.pagination a {
     color: black;
     float: left;
     padding: 1rem 0.7rem;
     text-decoration: none;
     transition: background-color .3s;
+
 }
 
-.pagination > a.active {
-    background-color: dodgerblue;
+.pagination a.active {
+    background-color: rgb(30, 143, 255);
     color: white;
+
 }
 
-.pagination > a:hover:not(.active) {
-    background-color: #ddd;
+.pagination a:hover:not(.active) {
+    background-color: darkorange;
+    cursor: pointer;
 }
+
