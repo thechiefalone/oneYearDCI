@@ -68,6 +68,5 @@ function getImage(anyData) {
         a.setAttribute("data-lightbox", "mygallery");
         img.src = anyData.hits[i].largeImageURL;
         img.setAttribute("class", "images");
-        // document.getElementsByClassName("pagination-a")[i].setAttribute("class","active");
     }
 }
