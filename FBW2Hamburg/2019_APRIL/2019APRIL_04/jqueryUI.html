@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jquery UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./Themes/blitzer/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./jqueryUI.css">
+    <script src="./jqueryUI.js"></script>
+</head>
+<body>
+    <!-- Check Box -->
+    <form style="margin-top: 1em;">
+        <div id="radioset">
+            <input onclick="themeChange(blitzer)" type="radio" id="blitzer" name="radio" checked="checked"><label for="blitzer">Blitzer Theme</label>
+            <input onclick="themeChange(smoothness)"type="radio" id="smoothness" name="radio"><label for="smoothness">Smoothness Theme</label>
+        </div>
+    </form>
+    <!-- Accordion -->
+    <div id="accordion">
+        <h3>First</h3>
+        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+        <h3>Second</h3>
+        <div>Phasellus mattis tincidunt nibh.</div>
+        <h3>Third</h3>
+        <div>Nam dui erat, auctor a, dignissim quis.</div>
+    </div>
+</body>
+</html>
