@@ -1,0 +1,15 @@
+{
+  "name": "2019april_29",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thechiefalone",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.1.1",
+    "upper-case": "^1.1.3"
+  }
+}
