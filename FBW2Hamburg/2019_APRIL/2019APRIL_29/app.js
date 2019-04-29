@@ -13,7 +13,7 @@ http.createServer(function (req, res) {
     // res.end(uc('Hello World <br>')+myUrl.query.email);
     if (myUrl.pathname == '/contact') {
         // res.end('You are in the contact page');
-        if (myUrl.query.name == '' || typeof (myUrl.query.name) == 'undefined') {
+        if (myUrl.query.firstname == '' || typeof (myUrl.query.firstname) == 'undefined') {
             fs.readFile('contact.html', function (err, data) {
                 if (err) {
                     res.end(err.stack);
@@ -22,13 +22,13 @@ http.createServer(function (req, res) {
                 }
             });
         } else {
+
             emailSender.sendEmail('alperenozkan@gmail.com',myUrl.query.email,myUrl.query.subject,myUrl.query.message,function(err,info){
                 if(err){
                     res.end(err.stack);
                 }else{
                     res.end(info.response+"<br>thank you "+myUrl.query.name+" we got your message and we will response soon");
                 }
-                res.end();
             });
         }
     } else {
