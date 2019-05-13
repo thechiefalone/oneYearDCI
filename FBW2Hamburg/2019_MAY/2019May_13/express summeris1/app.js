@@ -29,7 +29,7 @@ app.set('view engine', 'ejs');
 
 
 // end route system
-const nav = [{title: "Books2", link: "/books"},
+const nav = [{title: "Books", link: "/books"},
             {title: "Authors", link: "/authors"}];
 const booksRoutes = require('./src/routes/booksRoutes')(nav);
     app.use('/books',booksRoutes);
